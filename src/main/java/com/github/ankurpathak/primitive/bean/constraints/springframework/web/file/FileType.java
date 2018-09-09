@@ -27,7 +27,7 @@ public @interface FileType {
 
     String[] mimes() default  {};
 
-    String message() default "{com.ankurpathak.server.validation.constraints.FileType.message}";
+    String message() default "{com.github.ankurpathak.primitive.bean.constraints.springframework.web.file.FileType.message}";
 
     Class<?>[] groups() default {};
 
