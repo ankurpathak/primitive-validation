@@ -1,4 +1,4 @@
-package com.github.ankurpathak.primitive.bean.constraints.string;
+package com.github.ankurpathak.primitive.string;
 
 import com.github.ankurpathak.primitive.bean.constraints.util.Strings;
 import com.google.i18n.phonenumbers.NumberParseException;

@@ -1,7 +1,7 @@
 package com.github.ankurpathak.primitive.bean.constraints.string.validator;
 
 import com.github.ankurpathak.primitive.bean.constraints.string.Contact;
-import com.github.ankurpathak.primitive.bean.constraints.string.StringValidator;
+import com.github.ankurpathak.primitive.string.StringValidator;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
