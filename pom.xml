@@ -6,7 +6,7 @@
 
     <groupId>com.github.ankurpathak.primitive</groupId>
     <artifactId>primitive-validation</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
 
 
     <name>${project.groupId}:${project.artifactId}</name>
