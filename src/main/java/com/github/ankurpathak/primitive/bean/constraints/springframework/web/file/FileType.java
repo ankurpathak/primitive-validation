@@ -6,21 +6,20 @@ package com.github.ankurpathak.primitive.bean.constraints.springframework.web.fi
 
 
 import com.github.ankurpathak.primitive.bean.constraints.springframework.web.file.validator.FileTypeValidator;
+import com.github.ankurpathak.primitive.bean.constraints.string.Any;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;
-import java.lang.annotation.Documented;
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Retention;
-import java.lang.annotation.Target;
+import java.lang.annotation.*;
 
 import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
 
-@Target({ElementType.METHOD, ElementType.FIELD, ElementType.ANNOTATION_TYPE, ElementType.CONSTRUCTOR, ElementType.PARAMETER, ElementType.TYPE_USE})
-@Retention(RUNTIME)
 @Constraint(validatedBy = FileTypeValidator.class)
+@Target({ElementType.METHOD, ElementType.FIELD, ElementType.ANNOTATION_TYPE, ElementType.CONSTRUCTOR, ElementType.PARAMETER, ElementType.TYPE_USE})
+@Retention(RetentionPolicy.RUNTIME)
 @Documented
+@Repeatable(FileType.List.class)
 public @interface FileType {
 
     boolean ignoreNull() default true;
@@ -32,4 +31,11 @@ public @interface FileType {
     Class<?>[] groups() default {};
 
     Class<? extends Payload>[] payload() default {};
+
+    @Target({ElementType.METHOD, ElementType.FIELD, ElementType.ANNOTATION_TYPE, ElementType.CONSTRUCTOR, ElementType.PARAMETER, ElementType.TYPE_USE})
+    @Retention(RetentionPolicy.RUNTIME)
+    @Documented
+    @interface List {
+        FileType[] value();
+    }
 }
