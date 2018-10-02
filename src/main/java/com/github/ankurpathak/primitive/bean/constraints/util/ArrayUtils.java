@@ -4,13 +4,9 @@ import java.lang.reflect.Array;
 
 public class ArrayUtils {
 
-
-
     public static int getLength(Object array) {
         return array == null ? 0 : Array.getLength(array);
     }
-
-
 
     public static boolean isEmpty(Object[] array) {
         return getLength(array) == 0;

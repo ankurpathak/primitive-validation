@@ -21,10 +21,7 @@ public class FileTypeValidator implements ConstraintValidator<FileType, Multipar
       String fileName = file.getOriginalFilename();
       Tika tika = new Tika();
       String mimeType = tika.detect(fileName);
-      if(ArrayUtils.isNotEmpty(config.mimes()) && Arrays.asList(config.mimes()).contains(mimeType))
-         return true;
-      else
-         return false;
+      return ArrayUtils.isNotEmpty(config.mimes()) && Arrays.asList(config.mimes()).contains(mimeType);
 
    }
 }
